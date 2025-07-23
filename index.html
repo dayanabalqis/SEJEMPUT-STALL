@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    span.s1 {font: 12.0px 'Apple Color Emoji'}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;SEJEMPUT STALL&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Segoe UI', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #f9f9f9;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>header {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #4CAF50;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: 2fr 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.menu, .order {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 2px 5px rgba(0,0,0,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.menu h2, .order h2 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.menu-buttons {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.menu-buttons button {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex: 1 1 45%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #eee;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #ccc;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: background 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.menu-buttons button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #d1f5d3;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.order-items {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.order-items div {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0.3rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.total {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.payment {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-pay {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #4CAF50;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.7rem 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-pay:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #45a049;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.receipt {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>white-space: pre-wrap;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px dashed #999;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: monospace;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;SEJEMPUT STALL&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="menu"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Menu&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="menu-buttons" id="menu"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="order"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Order&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="order-items" id="orderItems"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="total" id="total"&gt;Total: RM0.00&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="payment"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="btn-pay" onclick="pay()"&gt;Pay&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;select id="paymentType"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="cash"&gt;Cash&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="online"&gt;Online&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="receipt" id="receipt"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const menuItems = [</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ name: "Nasi Goreng Biasa", price: 5 },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ name: "Nasi Goreng Ayam", price: 8 },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ name: "Nasi Goreng Seafood", price: 10 },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ name: "Nasi Lemak Ayam", price: 6 },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ name: "Mi Goreng Mamak", price: 8 },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ name: "Teh O (Panas)", price: 1 },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ name: "Teh O (Sejuk)", price: 3 },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ name: "Sirap Bandung", price: 3 },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ name: "Sirap Bandung Big", price: 5 }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const menuDiv = document.getElementById("menu");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const orderItemsDiv = document.getElementById("orderItems");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const totalDiv = document.getElementById("total");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const receiptDiv = document.getElementById("receipt");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let order = [];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>menuItems.forEach(item =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const btn = document.createElement("button");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btn.textContent = `${item.name} - RM${item.price}`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btn.onclick = () =&gt; addItem(item);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>menuDiv.appendChild(btn);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function addItem(item) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>order.push(item);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>renderOrder();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function removeItem(index) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>order.splice(index, 1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>renderOrder();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderOrder() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>orderItemsDiv.innerHTML = "";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>order.forEach((item, index) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const div = document.createElement("div");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>div.innerHTML = `${item.name} - RM${item.price.toFixed(2)} &lt;button onclick="removeItem(${index})"&gt;<span class="s1">✖️</span>&lt;/button&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>orderItemsDiv.appendChild(div);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const total = order.reduce((sum, item) =&gt; sum + item.price, 0);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>totalDiv.textContent = `Total: RM${total.toFixed(2)}`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function pay() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (order.length === 0) return alert("Add items first!");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const total = order.reduce((sum, item) =&gt; sum + item.price, 0);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const paymentType = document.getElementById("paymentType").value;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>let receipt = "<span class="s1">🧾</span> Resit Stall Boss POS\n------------------------\n";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>order.forEach(item =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>receipt += `${item.name} - RM${item.price.toFixed(2)}\n`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">      </span>receipt += `------------------------\nTotal: RM${total.toFixed(2)}\nBayar: ${paymentType.toUpperCase()}\nTerima kasih!\n`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>receiptDiv.textContent = receipt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>window.print(); // auto trigger print</p>
+<p class="p1"><span class="Apple-converted-space">      </span>order = [];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>renderOrder();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>

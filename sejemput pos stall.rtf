@@ -1,0 +1,194 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+  <meta charset="UTF-8" />\
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>\
+  <title>SEJEMPUT STALL</title>\
+  <style>\
+    body \{\
+      font-family: 'Segoe UI', sans-serif;\
+      background: #f9f9f9;\
+      color: #333;\
+      margin: 0;\
+      padding: 0;\
+    \}\
+    header \{\
+      background: #4CAF50;\
+      color: white;\
+      padding: 1rem;\
+      text-align: center;\
+      font-size: 1.8rem;\
+      font-weight: bold;\
+    \}\
+    .container \{\
+      padding: 1rem;\
+      display: grid;\
+      grid-template-columns: 2fr 1fr;\
+      gap: 1rem;\
+    \}\
+    .menu, .order \{\
+      background: white;\
+      padding: 1rem;\
+      border-radius: 10px;\
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);\
+    \}\
+    .menu h2, .order h2 \{\
+      margin-top: 0;\
+    \}\
+    .menu-buttons \{\
+      display: flex;\
+      flex-wrap: wrap;\
+      gap: 10px;\
+    \}\
+    .menu-buttons button \{\
+      flex: 1 1 45%;\
+      padding: 0.8rem;\
+      background: #eee;\
+      border: 1px solid #ccc;\
+      border-radius: 8px;\
+      cursor: pointer;\
+      transition: background 0.3s;\
+    \}\
+    .menu-buttons button:hover \{\
+      background: #d1f5d3;\
+    \}\
+    .order-items \{\
+      margin-bottom: 1rem;\
+    \}\
+    .order-items div \{\
+      display: flex;\
+      justify-content: space-between;\
+      margin: 0.3rem 0;\
+    \}\
+    .total \{\
+      font-weight: bold;\
+      font-size: 1.2rem;\
+      margin-top: 1rem;\
+    \}\
+    .payment \{\
+      margin-top: 1rem;\
+    \}\
+    .btn-pay \{\
+      background: #4CAF50;\
+      color: white;\
+      padding: 0.7rem 1.5rem;\
+      border: none;\
+      border-radius: 8px;\
+      font-size: 1rem;\
+      cursor: pointer;\
+    \}\
+    .btn-pay:hover \{\
+      background: #45a049;\
+    \}\
+    .receipt \{\
+      white-space: pre-wrap;\
+      background: #fff;\
+      padding: 1rem;\
+      border: 1px dashed #999;\
+      margin-top: 1rem;\
+      font-family: monospace;\
+    \}\
+    @media (max-width: 768px) \{\
+      .container \{\
+        grid-template-columns: 1fr;\
+      \}\
+    \}\
+  </style>\
+</head>\
+<body>\
+  <header>SEJEMPUT STALL</header>\
+\
+  <div class="container">\
+    <div class="menu">\
+      <h2>Menu</h2>\
+      <div class="menu-buttons" id="menu"></div>\
+    </div>\
+\
+    <div class="order">\
+      <h2>Order</h2>\
+      <div class="order-items" id="orderItems"></div>\
+      <div class="total" id="total">Total: RM0.00</div>\
+      <div class="payment">\
+        <button class="btn-pay" onclick="pay()">Pay</button>\
+        <select id="paymentType">\
+          <option value="cash">Cash</option>\
+          <option value="online">Online</option>\
+        </select>\
+      </div>\
+      <div class="receipt" id="receipt"></div>\
+    </div>\
+  </div>\
+\
+  <script>\
+    const menuItems = [\
+      \{ name: "Nasi Goreng Biasa", price: 5 \},\
+      \{ name: "Nasi Goreng Ayam", price: 8 \},\
+      \{ name: "Nasi Goreng Seafood", price: 10 \},\
+      \{ name: "Nasi Lemak Ayam", price: 6 \},\
+      \{ name: "Mi Goreng Mamak", price: 8 \},\
+      \{ name: "Teh O (Panas)", price: 1 \},\
+      \{ name: "Teh O (Sejuk)", price: 3 \},\
+      \{ name: "Sirap Bandung", price: 3 \},\
+      \{ name: "Sirap Bandung Big", price: 5 \}\
+    ];\
+\
+    const menuDiv = document.getElementById("menu");\
+    const orderItemsDiv = document.getElementById("orderItems");\
+    const totalDiv = document.getElementById("total");\
+    const receiptDiv = document.getElementById("receipt");\
+\
+    let order = [];\
+\
+    menuItems.forEach(item => \{\
+      const btn = document.createElement("button");\
+      btn.textContent = `$\{item.name\} - RM$\{item.price\}`;\
+      btn.onclick = () => addItem(item);\
+      menuDiv.appendChild(btn);\
+    \});\
+\
+    function addItem(item) \{\
+      order.push(item);\
+      renderOrder();\
+    \}\
+\
+    function removeItem(index) \{\
+      order.splice(index, 1);\
+      renderOrder();\
+    \}\
+\
+    function renderOrder() \{\
+      orderItemsDiv.innerHTML = "";\
+      order.forEach((item, index) => \{\
+        const div = document.createElement("div");\
+        div.innerHTML = `$\{item.name\} - RM$\{item.price.toFixed(2)\} <button onclick="removeItem($\{index\})">\uc0\u10006 \u65039 </button>`;\
+        orderItemsDiv.appendChild(div);\
+      \});\
+      const total = order.reduce((sum, item) => sum + item.price, 0);\
+      totalDiv.textContent = `Total: RM$\{total.toFixed(2)\}`;\
+    \}\
+\
+    function pay() \{\
+      if (order.length === 0) return alert("Add items first!");\
+      const total = order.reduce((sum, item) => sum + item.price, 0);\
+      const paymentType = document.getElementById("paymentType").value;\
+      let receipt = "\uc0\u55358 \u56830  Resit Stall Boss POS\\n------------------------\\n";\
+      order.forEach(item => \{\
+        receipt += `$\{item.name\} - RM$\{item.price.toFixed(2)\}\\n`;\
+      \});\
+      receipt += `------------------------\\nTotal: RM$\{total.toFixed(2)\}\\nBayar: $\{paymentType.toUpperCase()\}\\nTerima kasih!\\n`;\
+      receiptDiv.textContent = receipt;\
+      window.print(); // auto trigger print\
+      order = [];\
+      renderOrder();\
+    \}\
+  </script>\
+</body>\
+</html>\
+}
